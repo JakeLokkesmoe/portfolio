@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+  padding: 70px 0 50px;
+}
+
+.App > * {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 600ms;
+}
+
+.App > *:first-child {
+  animation-delay: 400ms;
+}
+
+.App > *:nth-child(2) {
+  animation-delay: 600ms;
+}
+
+.App > *:nth-child(3) {
+  animation-delay: 800ms;
+}
+
+.App > *:nth-child(4) {
+  animation-delay: 1000ms;
+}
+
+.App > *:nth-child(5) {
+  animation-delay: 1200ms;
+}
+
+.App-picture {
+  border-radius: 50%;
+  border: solid 5px #fff;
+  width: 12rem;
+  height: 12rem;
+  vertical-align: middle;
+}
+
+.App-title {
+  font-size: 3.6rem;
+  width: 70%;
+  margin: 30px 15%;
+}
+
+.App-title:after {
+  content: "";
+  display: block;
+  visibility: visible;
+  border-bottom: solid 0.1rem #777;
+  margin: 3rem auto 1.5rem;
+  width: 60%;
+}
+
+.App p {
+  width: 70%;
+  margin: 0 15%;
+}
+
+.App-social {
+  border: solid 0.1rem #777982;
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3rem;
+  color: #777982;
+  display: inline-block;
+  margin: 3rem 0.7rem;
+}
+
+.App-social:hover {
+  color: #c7c7cb;
+  border-color: #c7c7cb;
+}
+
+@media (min-width: 768px) {
+  .App {
+    padding: 20rem 0;
+  }
+
+  .App-title:after {
+    width: 300px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
