@@ -1,24 +1,66 @@
 import React, { Component } from 'react';
-import socialLinks from './socialLinks.json';
 import './App.css';
+import resume from './resources/resume.pdf';
+import picture from './resources/jake_240.jpg';
+import background from './resources/background.png';
+
+const socialLinks = [
+  {
+    href: resume,
+    name: 'Resume',
+    icon: 'file-text-o',
+    htmlProps: {
+      download: 'Resume - Jake Lokkesmoe',
+    },
+  },
+  {
+    href: 'https://twitter.com/JacobLokkesmoe',
+    name: 'Twitter',
+    icon: 'twitter',
+  },
+  {
+    href: 'https://www.linkedin.com/in/jakelokkesmoe',
+    name: 'LinkedIn',
+    icon: 'linkedin',
+  },
+  {
+    href: 'https://www.github.com/JakeLokkesmoe',
+    name: 'GitHub',
+    icon: 'git',
+  },
+  {
+    href: 'mailto:jake@jakelokkesmoe.com',
+    name: 'Mail',
+    icon: 'envelope-o',
+  },
+];
 
 const SocialIcon = ({ href, name, icon, htmlProps }) => (
   <a href={href} target="_blank" className="App-social" tooltip={name}
-    rel="noopener noreferrer"
+    rel="noopener noreferrer" {...htmlProps}
   >
     <i className={`fa fa-${icon}`}></i>
   </a>
 );
+
+SocialIcon.defaultProps = {
+  htmlProps: {},
+};
 
 class App extends Component {
   state = {
     socialLinks,
   };
 
+  componentWillMount() {
+    // Set body background image
+    document.body.style.backgroundImage = `url('${background}')`;
+  }
+
   render() {
     return (
       <div className="App">
-        <img className="App-picture" src="/jake_240.jpg" alt="" />
+        <img className="App-picture" src={picture} alt="" />
         <h1 className="App-title">
           Developer. Designer. Problem-Solver.
         </h1>
