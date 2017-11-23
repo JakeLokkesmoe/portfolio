@@ -3,7 +3,6 @@ import SocialIcon from "./components/SocialIcon/SocialIcon";
 import "./App.css";
 import resume from "./resources/resume.pdf";
 import picture from "./resources/jake_240.jpg";
-import background from "./resources/background.png";
 
 const socialLinks = [
   {
@@ -40,11 +39,6 @@ class App extends Component {
   state = {
     socialLinks
   };
-
-  componentWillMount() {
-    // Set body background image
-    document.body.style.backgroundImage = `url('${background}')`;
-  }
 
   render() {
     return (

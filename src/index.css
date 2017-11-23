@@ -3,8 +3,7 @@ html {
 }
 
 body {
-  background-position: top center;
-  background-repeat: no-repeat;
+  background: url('./resources/background.png') top center no-repeat;
   background-color: #34363c;
   font-family: "Roboto Slab", sans-serif;
   line-height: 1.42857143;
