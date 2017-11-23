@@ -1,55 +1,44 @@
-import React, { Component } from 'react';
-import './App.css';
-import resume from './resources/resume.pdf';
-import picture from './resources/jake_240.jpg';
-import background from './resources/background.png';
+import React, { Component } from "react";
+import SocialIcon from "./components/SocialIcon/SocialIcon";
+import "./App.css";
+import resume from "./resources/resume.pdf";
+import picture from "./resources/jake_240.jpg";
+import background from "./resources/background.png";
 
 const socialLinks = [
   {
     href: resume,
-    name: 'Resume',
-    icon: 'file-text-o',
+    name: "Resume",
+    icon: "file-text-o",
     htmlProps: {
-      download: 'Resume - Jake Lokkesmoe',
-    },
+      download: "Resume - Jake Lokkesmoe"
+    }
   },
   {
-    href: 'https://twitter.com/JacobLokkesmoe',
-    name: 'Twitter',
-    icon: 'twitter',
+    href: "https://twitter.com/JacobLokkesmoe",
+    name: "Twitter",
+    icon: "twitter"
   },
   {
-    href: 'https://www.linkedin.com/in/jakelokkesmoe',
-    name: 'LinkedIn',
-    icon: 'linkedin',
+    href: "https://www.linkedin.com/in/jakelokkesmoe",
+    name: "LinkedIn",
+    icon: "linkedin"
   },
   {
-    href: 'https://www.github.com/JakeLokkesmoe',
-    name: 'GitHub',
-    icon: 'git',
+    href: "https://www.github.com/JakeLokkesmoe",
+    name: "GitHub",
+    icon: "git"
   },
   {
-    href: 'mailto:jake@jakelokkesmoe.com',
-    name: 'Mail',
-    icon: 'envelope-o',
-  },
+    href: "mailto:jake@jakelokkesmoe.com",
+    name: "Mail",
+    icon: "envelope-o"
+  }
 ];
-
-const SocialIcon = ({ href, name, icon, htmlProps }) => (
-  <a href={href} target="_blank" className="App-social" tooltip={name}
-    rel="noopener noreferrer" {...htmlProps}
-  >
-    <i className={`fa fa-${icon}`}></i>
-  </a>
-);
-
-SocialIcon.defaultProps = {
-  htmlProps: {},
-};
 
 class App extends Component {
   state = {
-    socialLinks,
+    socialLinks
   };
 
   componentWillMount() {
@@ -61,18 +50,17 @@ class App extends Component {
     return (
       <div className="App">
         <img className="App-picture" src={picture} alt="" />
-        <h1 className="App-title">
-          Developer. Designer. Problem-Solver.
-        </h1>
+        <h1 className="App-title">Developer. Designer. Problem-Solver.</h1>
         <p>
           Hi, my name is Jake Lokkesmoe. I am a software developer and designer.
-          I am at my best when diving head first into new challenges.
-          I have a hardwired desire to be better, a strong ambition to make a
-          difference in the world, and an instinct for good design.
+          I am at my best when diving head first into new challenges. I have a
+          hardwired desire to be better, a strong ambition to make a difference
+          in the world, and an instinct for good design.
         </p>
         <p>
-          {this.state.socialLinks.map(link =>
-            <SocialIcon key={link.name} {...link} />)}
+          {this.state.socialLinks.map(link => (
+            <SocialIcon key={link.name} {...link} />
+          ))}
         </p>
       </div>
     );

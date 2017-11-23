@@ -58,22 +58,6 @@
   margin: 0 15%;
 }
 
-.App-social {
-  border: solid 0.1rem #777982;
-  border-radius: 50%;
-  width: 3.2rem;
-  height: 3.2rem;
-  line-height: 3rem;
-  color: #777982;
-  display: inline-block;
-  margin: 3rem 0.7rem;
-}
-
-.App-social:hover {
-  color: #c7c7cb;
-  border-color: #c7c7cb;
-}
-
 @media (min-width: 768px) {
   .App {
     padding: 20rem 0;
@@ -85,6 +69,10 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

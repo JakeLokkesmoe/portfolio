@@ -1,0 +1,15 @@
+.SocialIcon {
+  border: solid 0.1rem #777982;
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3rem;
+  color: #777982;
+  display: inline-block;
+  margin: 3rem 0.7rem;
+}
+
+.SocialIcon:hover {
+  color: #c7c7cb;
+  border-color: #c7c7cb;
+}
