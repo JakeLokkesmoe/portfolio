@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import SocialIcon from "./components/SocialIcon/SocialIcon";
 import "./App.css";
 import resume from "./resources/resume.pdf";
