@@ -1,18 +1,9 @@
 import React from "react";
 import SocialIcon from "./components/SocialIcon/SocialIcon";
 import "./App.css";
-import resume from "./resources/resume.pdf";
 import picture from "./resources/jake_240.jpg";
 
 const socialLinks = [
-  {
-    href: resume,
-    name: "Resume",
-    icon: "file-text-o",
-    htmlProps: {
-      download: "Resume - Jake Lokkesmoe"
-    }
-  },
   {
     href: "https://twitter.com/JacobLokkesmoe",
     name: "Twitter",
